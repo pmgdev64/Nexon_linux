@@ -1,4 +1,6 @@
 ;Copyright © 2025 By Pmg Foundation. All Right Reserved.
+;This Bootloader Is Coded By Pmgdev64.
+;Thanks Nexon Company For Sponsored This Projects.
 [bits 16]
 [org 0xc700]
 
