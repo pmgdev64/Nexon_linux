@@ -1,2 +1,2 @@
 # Nexon_Kernel
-An C Operating System Inspired From Nexon Company
+An C & Assembly Operating System Inspired From Nexon Company
