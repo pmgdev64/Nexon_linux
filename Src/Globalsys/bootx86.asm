@@ -6,6 +6,7 @@
 
 global start
 .section bootlogo
+.extern printf
 .extern ExecuteKernel
 
 segments_clear:
@@ -42,11 +43,19 @@ boot_error:
     int 0x10
     jmp stop
 
+print:
+    mov bp, msg     ; address of message
+    mov cx, msg_len ; length of message
+    mov bx, 0x07    ; font color is white
+    mov ax, 0x1301  ; number of systemcall which print string
+    int 0x10
+
 stop:
     hlt 
 
 times 510 - ($ - $$) db 0
 dw 0xaa55
 
+msg: call printf
 bootlogo: incbin "globalres/logo.vad"
 filled: time 512 - ($ - $$) % 512 db 0
