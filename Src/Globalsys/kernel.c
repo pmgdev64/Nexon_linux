@@ -1,1 +1,1 @@
-void KernelMain() {}
+static void KernelMain() {}
