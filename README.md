@@ -1,2 +1,2 @@
 # Nexon_Kernel
-The LFS based operating system inspired from nexon company
+An C Operating System Inspired From Nexon Company
