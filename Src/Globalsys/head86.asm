@@ -2,7 +2,8 @@
 [bits 16]
 [org 0xc700]
 
-.section start
+global start
+.section bootlogo
 .extern KernelMain
 
 segments_clear:
@@ -44,5 +45,5 @@ stop:
 times 510 - ($ - $$) db 0
 dw 0xaa55
 
-bootlogo: incbin "bootlogo.vad"
+bootlogo: incbin "logo.vad"
 filled: time 512 - ($ - $$) % 512 db 0
