@@ -69,7 +69,7 @@ boot_error:
 
 print:
     mov bp, msg     ; address of message
-    mov cx, msg_len ; length of message
+    mov cx ; length of message
     mov bx, 0x07    ; font color is white
     mov ax, 0x1301  ; number of systemcall which print string
     int 0x10
