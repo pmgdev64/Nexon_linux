@@ -1,3 +1,3 @@
 #include <globaldrivers/graphics.h>
 
-static void KernelMain() {}
+static void ExecuteKernel() {}
