@@ -2,7 +2,7 @@
 [bits 16]
 [org 0xc700]
 
-.section .main
+.section start
 .extern KernelMain
 
 segments_clear:
