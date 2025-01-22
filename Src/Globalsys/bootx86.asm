@@ -2,7 +2,7 @@
 ;This Bootloader Is Coded By Pmgdev64.
 ;Thanks Nexon Company For Sponsored This Projects.
 [bits 16]
-[org 0xc700]
+[org 0x7c00]
 
 global start
 .section bootlogo
