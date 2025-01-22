@@ -1,2 +1,2 @@
 # Nexon_Kernel
-An C & Assembly Operating System Inspired From Nexon Company
+This Repositories Will Contains All Of Source Code And The Developer Guides. For More Information, Visit <a href="kawaiiproject.neocities.org/contents/nexon_linux">kawaiiproject.neocities.org/contents/nexon_linux</a>
