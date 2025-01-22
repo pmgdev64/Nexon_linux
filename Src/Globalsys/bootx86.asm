@@ -5,6 +5,7 @@
 [org 0x7c00]
 
 global start
+global kernel_register
 .section bootlogo
 .extern printf
 .extern ExecuteKernel
@@ -20,7 +21,30 @@ segments_clear:
     sti
 
 start:
-    mov ax, 0x13
+    mov ax, DATA_SEG
+    mov ds, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+    mov ss, ax
+    mov ebp, 0x00200000
+    mov esp, ebp
+
+    ; Enable the A20 line
+    in al, 0x92
+    or al, 2
+    out 0x92, al
+
+    ; Remap the master PIC
+    mov al, 00010001b
+    out 0x20, al ; Tell master PIC
+
+    mov al, 0x20 ; Interrupt 0x20 is where master ISR should start
+    out 0x21, al
+
+    mov al, 00000001b
+    out 0x21, al
+    
     call ExecuteKernel
     int 0x10
 
@@ -51,7 +75,15 @@ print:
     int 0x10
 
 stop:
-    hlt 
+    hlt
+
+kernel_registers:
+    mov ax, 0x10
+    mov ds, ax
+    mov es, ax
+    mov gs, ax
+    mov fs, ax
+    ret
 
 times 510 - ($ - $$) db 0
 dw 0xaa55
