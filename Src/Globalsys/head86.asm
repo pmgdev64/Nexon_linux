@@ -45,5 +45,5 @@ stop:
 times 510 - ($ - $$) db 0
 dw 0xaa55
 
-bootlogo: incbin "logo.vad"
+bootlogo: incbin "globalres/logo.vad"
 filled: time 512 - ($ - $$) % 512 db 0
