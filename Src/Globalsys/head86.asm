@@ -4,7 +4,7 @@
 
 global start
 .section bootlogo
-.extern KernelMain
+.extern ExecuteKernel
 
 segments_clear:
     cli
@@ -18,6 +18,7 @@ segments_clear:
 
 start:
     mov ax, 0x13
+    call ExecuteKernel
     int 0x10
 
 read_disk:
