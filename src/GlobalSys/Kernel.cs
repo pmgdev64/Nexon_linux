@@ -1,5 +1,5 @@
 using System;
-using System.Text:
+using System.Text;
 using System.Collections.Generic;
 using Cosmos.System.Graphics;
 using Cosmos.Core;
