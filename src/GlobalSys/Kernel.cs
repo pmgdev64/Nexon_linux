@@ -1,5 +1,5 @@
 using System;
-using Sys = Cosmos.System
+using Sys = Cosmos.System;
 
 namespace NexonKernel {
   public class kernel : Sys.Kernel {
@@ -9,5 +9,7 @@ namespace NexonKernel {
 
     protected override void Run() {
       var Console = Console.WriteLine($"Root@" + Consolecolor.Cyan + "NexonKernel: ~$ ");
-      var ConsoleRead = Console.ReadLine(Console)
-  
+      var ConsoleRead = Console.ReadLine(Console);
+    }
+  }
+}
