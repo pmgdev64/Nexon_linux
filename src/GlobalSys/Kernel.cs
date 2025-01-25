@@ -91,6 +91,7 @@ namespace NexonKernel {
                     // switch operator works great
                     Console.WriteLine($"Command '{words[0]}' Is not found in the command list. make sure you command are added, and try again.");
                     break;
+            }
         }
     }
 }
