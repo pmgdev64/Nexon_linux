@@ -14,10 +14,10 @@ namespace NexonKernel {
         public static Canvas canvas;
         public static string username = "Root";
         public static string password = "1234";
+        public static string version = "0.1.0";
+        public static bool isInstaller = False;
         public static Bitmap bitmap = new Bitmap("GlobalRes/Background.bmp");
-        protected override void BeforeRun() {
-            Console.Clear();
-            Console.WriteLine("Welcome To "+ConsoleColor.Cyan+"NexonKernel");
+        public void Login() {
             Console.Write($"Login: ");
             var login = Console.ReadLine();
             if (login == username) {
@@ -26,6 +26,15 @@ namespace NexonKernel {
                 if (pass = password) {
                     Console.WriteLine(ConsoleColor.Red+"You Are Logged In As A Default Users:", username);
                     Run();
+                else {
+                    Console.WriteLine(ConsoleColor.Red+"Wrong Or Invaild Password.");
+                    Login();
+                }
+            }
+        protected override void BeforeRun() {
+            Console.Clear();
+            Console.WriteLine("Welcome To "+ConsoleColor.Cyan+"NexonKernel");
+            Login();           
         }
 
         protected override void Run() {
