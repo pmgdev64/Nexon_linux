@@ -38,7 +38,7 @@ namespace NexonKernel {
         }
 
         protected override void Run() {
-            Console.Write($"Root@"+ConsoleColor.Cyan+"NexonKernel:~$ ");
+            Console.Write(username+$"@"+ConsoleColor.Cyan+$"NexonKernel:~$ ");
             var input = Console.ReadLine();
             string[] words = input.Split(' ');
             switch (words[0])
