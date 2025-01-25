@@ -16,7 +16,7 @@ namespace NexonKernel {
         public static string password = "1234";
         public static string version = "0.1.0";
         public static bool isInstaller = false;
-        public static Bitmap bitmap = new Bitmap("GlobalRes/Background.bmp");
+        public static Bitmap bitmap = new Bitmap("Background.bmp");
         public void Login() {
             Console.Write($"Login: ");
             var login = Console.ReadLine();
