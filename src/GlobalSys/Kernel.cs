@@ -10,7 +10,7 @@ namespace NexonKernel {
         public static Canvas canvas;
         public static string username = "Root";
         public static string password = "1234";
-        public static var bitmap = new Bitmap("Res/Background.bmp");
+        public static Bitmap bitmap = new Bitmap("GlobalRes/Background.bmp");
         protected override void BeforeRun() {
             Console.Clear();
             Console.WriteLine("Welcome To "+ConsoleColor.Cyan+"NexonKernel");
