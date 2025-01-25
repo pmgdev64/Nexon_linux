@@ -8,10 +8,20 @@ using Sys = Cosmos.System;
 namespace NexonKernel {
     public class kernel : Sys.Kernel {
         public static Canvas canvas;
+        public static string username = "Root";
+        public static string password = "1234";
         public static var bitmap = new Bitmap("Res/Background.bmp");
         protected override void BeforeRun() {
             Console.Clear();
             Console.WriteLine("Welcome To "+ConsoleColor.Cyan+"NexonKernel");
+            Console.Write($"Login: ");
+            var login = Console.ReadLine();
+            if (login == username) {
+                Console.Write($"Password: ");
+                var pass = Console.ReadLine();
+                if (pass = password) {
+                    Console.WriteLine(ConsoleColor.Red+"You Are Logged In As A Default Users:", username);
+                    Run();
         }
 
         protected override void Run() {
