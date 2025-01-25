@@ -1,9 +1,13 @@
 using System;
+using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using Cosmos.System.Graphics;
 using Cosmos.Core;
 using Sys = Cosmos.System;
+using Cosmos.System.Network.Config;
+using Cosmos.System.Network.IPv4.UDP.DNS;
+using Cosmos.System.Network.IPv4;
 
 namespace NexonKernel {
     public class kernel : Sys.Kernel {
