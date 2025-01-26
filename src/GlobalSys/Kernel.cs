@@ -56,6 +56,8 @@ namespace NexonKernel {
                         case "--Reboot":
                             Sys.Power.Reboot(); // restart too
                         break;
+                        case "--install":
+                            install_system();
                         default:
                             Console.WriteLine(ConsoleColor.Cyan+$"[SYSTEM] Bad Or Wrong Argument.");
                             break;
@@ -68,11 +70,13 @@ namespace NexonKernel {
                     // console methods are plugged
                     Console.WriteLine(ConsoleColor.Red+"[NEXON KERNEL HELP COMMANDS]");
                     Console.WriteLine("Here Is All Of Displayed Command:");
-                    Console.WriteLine("GETCPUINFORMATION                  Prints info about current cpu");
-                    Console.WriteLine("SYSTEM   (--Shutdown, --Reboot)    Execute system functions");
-                    Console.WriteLine("LOADSYSTEMFONT                     Loads current system font from directorl");
-                    Console.WriteLine("INTIALIZEGUI                       Intialize the GUI");
-                    Console.WriteLine("HELP                               Shows this help menu");
+                    Console.WriteLine("GETCPUINFORMATION               |  Prints info about current cpu");
+                    Console.WriteLine(@"
+                                     SYSTEM                           |  Execute system functions
+                                     (--Shutdown, --Reboot, --install)|");
+                    Console.WriteLine("LOADSYSTEMFONT                  |  Loads current system font from directorl");
+                    Console.WriteLine("INTIALIZEGUI                    |  Intialize the GUI");
+                    Console.WriteLine("HELP!                           |  Shows this help menu");
                     Console.WriteLine(ConsoleColor.Green+"For More Information, Visit https://kawaiiproject.neocities.org/Contents/nexon_kernel.");
                     break;
                 default:
