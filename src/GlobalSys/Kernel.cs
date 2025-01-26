@@ -9,6 +9,7 @@ using Cosmos.System.Network.Config;
 using Cosmos.System.Network.IPv4.UDP.DNS;
 using Cosmos.System.Network.IPv4;
 using NexonKernel.Interface.GUI;
+using NexonKernel.FileSystem.Installer;
 
 namespace NexonKernel {
     public class kernel : Sys.Kernel {
