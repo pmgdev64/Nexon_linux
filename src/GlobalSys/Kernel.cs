@@ -64,7 +64,7 @@ namespace NexonKernel {
                             break;
                     }
                 case "LoadSystemFont":
-                    Font ComicSans = new PCScreenFont(14, 14, "Sysfont/ComicSans.ttf", null);
+                    Font ComicSans = new PCScreenFont(14, 14, "Sysfont/comicsans.ttf", null);
                 case "IntializeGUI":
                     loadgui();
                 case "Help!":
