@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using Cosmos.System;
 using Cosmos.System.Graphics;
+using NexonKernel.Interface.Dialog;
 
 namespace NexonKernel.Interface.GUI {
     public class gui {
