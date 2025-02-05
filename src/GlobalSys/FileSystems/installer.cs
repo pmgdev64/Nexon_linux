@@ -19,15 +19,15 @@ namespace NexonKernel.FileSystem.Installer {
             string cPassword = Console.ReadLine();
             Console.Write(username +"> "); //when your put username variable it should look like this "The user name: "
             Console.WriteLine("Creating System Directory..."); //Creating Directory or folder
-            fs.CreateDirectory("0:\\yourOS\\");
+            fs.CreateDirectory("0:\\GlobalRoot\\System86\\");
             Console.WriteLine("Creating File for user");
-            fs.CreateFile("0:\\yourOS\\System.txt"); //Creating File System
-            fs.CreateFile("0:\\yourOS\\users.db");
-            fs.CreateFile("0:\\yourOS\\password.db"); //creating a password files
+            fs.CreateFile("0:\\GlobalRoot\\System86\\GlobalConfig\\System.txt"); //Creating File System
+            fs.CreateFile("0:\\GlobalRoot\\System86\\GlobalConfig\\users.db");
+            fs.CreateFile("0:\\GlobalRoot\\System86\\GlobalConfig\\password.db"); //creating a password files
             Console.WriteLine("Setting User Preferences...");
-            File.WriteAllText("0:\\yourOS\\System.txt", write);
-            File.WriteAllText("0:\\yourOS\\users.db", username); `    //This will save username
-            File.WriteAllText("0:\\yourOS\\password.db", cPassword); //this one will save the user password
+            File.WriteAllText("0:\\GlobalRoot\\System86\\GlobalConfig\\System.txt", write);
+            File.WriteAllText("0:\\GlobalRoot\\System86\\GlobalConfig\\users.db", username); `    //This will save username
+            File.WriteAllText("0:\\GlobalRoot\\System86\\GlobalConfig \\password.db", cPassword); //this one will save the user password
             Console.WriteLine("Reboot ONEOS in 3 seconds");
             Cosmos.HAL.Global.PIT.Wait(3000);
             Sys.Power.Reboot(); //when
