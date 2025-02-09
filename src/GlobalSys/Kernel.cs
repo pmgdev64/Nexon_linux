@@ -35,6 +35,8 @@ namespace NexonKernel {
             }
         protected override void BeforeRun() {
             Console.Clear();
+            Console.WriteLine("[SYSTEM] Checking the memory......");
+            Console.WriteLine("Done.");
             Console.WriteLine("Welcome To "+ConsoleColor.Cyan+"NexonKernel");
             Login();           
         }
