@@ -8,6 +8,7 @@ using NexonKernel.Interface.Dialog;
 namespace NexonKernel.Interface.GUI {
     public class gui {
         public void loadgui() {
+            Canvas canvas;
             var gui = FullScreenCanvas.GetFullScreenCanvas();
             mDebugger.Send("Run");
             canvas.DrawPoint(Color.Red, 69, 69);
